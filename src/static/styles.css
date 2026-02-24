@@ -91,21 +91,43 @@ section h3 {
 }
 
 .participants-section ul {
-  list-style-position: inside;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .participants-section li {
-  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
   color: #555;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.participants-section li:before {
-  content: "• ";
-  color: #0066cc;
-  font-weight: bold;
-  margin-right: 5px;
+.participants-section li:last-child {
+  border-bottom: none;
+}
+
+.participants-section span {
+  flex: 1;
+}
+
+.delete-participant {
+  background-color: transparent;
+  color: #666;
+  border: none;
+  padding: 4px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+  margin-left: 10px;
+}
+
+.delete-participant:hover {
+  transform: scale(1.2);
+  color: #d32f2f;
+  background-color: transparent;
 }
 
 .no-participants {
